@@ -86,7 +86,25 @@ for(i = 0; i < 101; i++){
 }
 
 //7_Question
-//WORKING ON RIGHT NOW
+
+var today = new Date();
+
+//The targeted lenght of day is two digit so if the day number is single digit, then it will add 0 to the beginning of it.
+var TodayDay = String(today.getDate()).padStart(2, '0');
+//January is 0 therefore we added 1. The targeted lenght of month is two digit
+//so if the month number is single digit, then it will add 0 to the beginning of it.
+//Example: 10/05/21 
+var TodayMonth = String(today.getMonth() + 1).padStart(2, '0'); 
+var TodayYear = today.getFullYear();
+
+//We can also use this way to print today's date:
+// todayDate = new Date().toLocaleDateString()
+
+var todayDate = (TodayMonth + "/" + TodayDay + "/" + TodayYear)
+console.log("Today's date is: " + todayDate);
+
+
+//WORKING ON RIGHT NOW, Different Version of printing today's date
 if(TodayDate.getDay() == 0){
 	TodayString == "Sunday" ;
 }
